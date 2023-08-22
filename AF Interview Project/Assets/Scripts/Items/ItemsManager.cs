@@ -91,7 +91,7 @@
 			var item = itemHolder.GetItem(true);
 			inventoryController.AddItem(item);
 			
-			//If not needed log could be deleted
+			//If not needed, log could be deleted
 			Debug.Log($"Picked up {item.Name} with value of {item.Value} and now have {inventoryController.ItemsCount} items");
 		}
 	}

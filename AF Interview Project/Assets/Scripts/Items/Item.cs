@@ -4,7 +4,7 @@
 	using UnityEngine;
 
 	[Serializable]
-	public struct Item
+	public class Item : IItem
 	{
 		[SerializeField] private string name;
 		[SerializeField] private int value;
@@ -16,11 +16,6 @@
 		{
 			this.name = name;
 			this.value = value;
-		}
-
-		public void Use()
-		{
-			Debug.Log("Using" + Name);
 		}
 	}
 }

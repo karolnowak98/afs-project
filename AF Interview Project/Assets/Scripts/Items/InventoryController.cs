@@ -7,7 +7,7 @@ namespace AFSInterview.Items
 
 	public class InventoryController : MonoBehaviour
 	{
-		[SerializeField] private List<Item> items;
+		[SerializeField] private readonly List<Item> items = new ();
 		[SerializeField] private int money;
 
 		public int ItemsCount => items.Count;
