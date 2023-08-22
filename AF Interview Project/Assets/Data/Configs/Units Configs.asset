@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c359bb49c332417eb68bd955881aa7b5, type: 3}
+  m_Name: Units Configs
+  m_EditorClassIdentifier: 
+  _configs:
+  - _prefab: {fileID: 8298016563784611285, guid: 3e36c81c8093f844cbc7eb90aa1bfae6,
+      type: 3}
+    _name: 0
+    _attributes: 000000000100000002000000
+    _maxHealth: 150
+    _armor: 5
+    _attackDamage: 25
+    _attackInterval: 1
+    _attributesBonusDamage: 050000000500000005000000
+  - _prefab: {fileID: 4377351820053424062, guid: b068562673015e94aa94610c394979bc,
+      type: 3}
+    _name: 1
+    _attributes: 000000000100000002000000
+    _maxHealth: 100
+    _armor: 2
+    _attackDamage: 35
+    _attackInterval: 2
+    _attributesBonusDamage: 0f0000000500000000000000
+  - _prefab: {fileID: 8298016563784611285, guid: 162c15704f0d02543aa318e5f42a09e1,
+      type: 3}
+    _name: 2
+    _attributes: 000000000100000002000000
+    _maxHealth: 200
+    _armor: 10
+    _attackDamage: 15
+    _attackInterval: 3
+    _attributesBonusDamage: 000000000a00000000000000
+  - _prefab: {fileID: 8298016563784611285, guid: d3e8f7883c7a43f4b9578baf9d711bdc,
+      type: 3}
+    _name: 3
+    _attributes: 000000000100000002000000
+    _maxHealth: 200
+    _armor: 5
+    _attackDamage: 50
+    _attackInterval: 5
+    _attributesBonusDamage: 000000000f0000000a000000
+  - _prefab: {fileID: 8298016563784611285, guid: fecd0169bc0626241a9658629e883522,
+      type: 3}
+    _name: 4
+    _attributes: 000000000100000002000000
+    _maxHealth: 300
+    _armor: 10
+    _attackDamage: 35
+    _attackInterval: 5
+    _attributesBonusDamage: 000000000f00000014000000

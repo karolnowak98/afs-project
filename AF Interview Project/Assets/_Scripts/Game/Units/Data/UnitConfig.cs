@@ -15,14 +15,14 @@ namespace AFSInterview.Game.Units.Data
         
         [SerializeField] private GameObject _prefab;
         [SerializeField] private UnitName _name;
-        [SerializeField] private List<UnitAttribute> _attributes;
+        [SerializeField] private List<UnitAttribute> _attributes = new();
         [SerializeField] private int _maxHealth;
         [SerializeField] private int _armor;
         [SerializeField] private int _attackDamage;
         [SerializeField] private int _attackInterval;
         
         [SerializeField, Tooltip("The order is consistent with the names of the attributes above!")] 
-        private List<int> _attributesBonusDamage;
+        private List<int> _attributesBonusDamage = new();
 
         public GameObject Prefab => _prefab;
         public UnitName Name => _name;
@@ -36,7 +36,6 @@ namespace AFSInterview.Game.Units.Data
         public UnitConfig(UnitName name)
         {
             _name = name;
-            _attributesBonusDamage = new List<int>();
        
             for (var i = 0; i < Enum.GetValues(typeof(UnitAttribute)).Length - 1; i++)
             {
