@@ -13,12 +13,11 @@
 
 		public void SellAllItemsUpToValue(int maxValue)
 		{
-			for (var i = 0; i < items.Count; i++)
+			for (var i = items.Count - 1; i >= 0; i--)
 			{
 				var itemValue = items[i].Value;
-				if (itemValue > maxValue)
+				if (itemValue > maxValue) 
 					continue;
-				
 				money += itemValue;
 				items.RemoveAt(i);
 			}

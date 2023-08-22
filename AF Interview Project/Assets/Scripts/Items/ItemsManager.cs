@@ -24,7 +24,7 @@
 			
 			if (Input.GetKeyDown(KeyCode.Space))
 				inventoryController.SellAllItemsUpToValue(itemSellMaxValue);
-
+ 
 			FindObjectOfType<TextMeshProUGUI>().text = "Money: " + inventoryController.Money;
 		}
 
