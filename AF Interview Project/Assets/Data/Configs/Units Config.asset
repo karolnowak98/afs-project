@@ -12,43 +12,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c359bb49c332417eb68bd955881aa7b5, type: 3}
   m_Name: Units Config
   m_EditorClassIdentifier: 
-  Configs:
-  - prefab: {fileID: 8567350890812939826, guid: 3a5af202a1d012144b982e5ea6d71bd0,
+  _configs:
+  - _prefab: {fileID: 8298016563784611285, guid: 3e36c81c8093f844cbc7eb90aa1bfae6,
       type: 3}
-    name: 0
-    attributes: 
-    maxHealth: 50
-    armor: 2
-    attackDamage: 5
-    attackInterval: 2
-  - prefab: {fileID: 8435890105057630103, guid: 104a2a68a653c274989a97e2f6db908c,
+    _name: 0
+    _attributes: 000000000100000002000000
+    _maxHealth: 150
+    _armor: 5
+    _attackDamage: 25
+    _attackInterval: 1
+    _attributesBonusDamage: 050000000500000005000000
+  - _prefab: {fileID: 4377351820053424062, guid: b068562673015e94aa94610c394979bc,
       type: 3}
-    name: 1
-    attributes: 
-    maxHealth: 30
-    armor: 1
-    attackDamage: 10
-    attackInterval: 2
-  - prefab: {fileID: 953364189755124348, guid: 8670c98c0a78aa3468b5ccb9ddb4387d, type: 3}
-    name: 2
-    attributes: 
-    maxHealth: 150
-    armor: 2
-    attackDamage: 7
-    attackInterval: 2
-  - prefab: {fileID: 6874631072776823059, guid: 41b3c52a54250534a8b40e6db305db43,
+    _name: 1
+    _attributes: 000000000100000002000000
+    _maxHealth: 100
+    _armor: 2
+    _attackDamage: 35
+    _attackInterval: 2
+    _attributesBonusDamage: 0f0000000500000000000000
+  - _prefab: {fileID: 8298016563784611285, guid: 162c15704f0d02543aa318e5f42a09e1,
       type: 3}
-    name: 3
-    attributes: 
-    maxHealth: 250
-    armor: 3
-    attackDamage: 25
-    attackInterval: 5
-  - prefab: {fileID: 6459634688571615741, guid: b2ed9752eae34b5429e9930f26a7d2fa,
+    _name: 2
+    _attributes: 000000000100000002000000
+    _maxHealth: 200
+    _armor: 10
+    _attackDamage: 15
+    _attackInterval: 3
+    _attributesBonusDamage: 000000000a00000000000000
+  - _prefab: {fileID: 8298016563784611285, guid: d3e8f7883c7a43f4b9578baf9d711bdc,
       type: 3}
-    name: 4
-    attributes: 
-    maxHealth: 200
-    armor: 5
-    attackDamage: 15
-    attackInterval: 5
+    _name: 3
+    _attributes: 000000000100000002000000
+    _maxHealth: 200
+    _armor: 5
+    _attackDamage: 50
+    _attackInterval: 5
+    _attributesBonusDamage: 000000000f0000000a000000
+  - _prefab: {fileID: 8298016563784611285, guid: fecd0169bc0626241a9658629e883522,
+      type: 3}
+    _name: 4
+    _attributes: 000000000100000002000000
+    _maxHealth: 300
+    _armor: 10
+    _attackDamage: 35
+    _attackInterval: 5
+    _attributesBonusDamage: 000000000f00000014000000
