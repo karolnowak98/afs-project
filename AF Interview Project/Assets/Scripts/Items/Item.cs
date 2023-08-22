@@ -4,7 +4,7 @@
 	using UnityEngine;
 
 	[Serializable]
-	public class Item
+	public struct Item
 	{
 		[SerializeField] private string name;
 		[SerializeField] private int value;

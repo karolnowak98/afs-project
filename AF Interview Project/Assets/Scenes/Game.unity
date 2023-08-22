@@ -487,6 +487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b6ca9eb0ebe4ffcb7fad76ea4a3b6ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moneyTMP: {fileID: 1931683898}
   inventoryController: {fileID: 117262}
   itemSellMaxValue: 150
   itemSpawnParent: {fileID: 246465938}
@@ -1685,7 +1686,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 15, y: -15}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 351.1464, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1931683898
 MonoBehaviour:
