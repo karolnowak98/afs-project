@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Inventory Config
   m_EditorClassIdentifier: 
   _itemSellMaxValue: 150
-  _itemSpawnInterval: 1
+  _startingMoney: 1000

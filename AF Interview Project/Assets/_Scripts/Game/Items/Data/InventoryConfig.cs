@@ -6,7 +6,9 @@ namespace AFSInterview.Game.Items.Data
     public class InventoryConfig : ScriptableObject
     {
         [SerializeField] private int _itemSellMaxValue;
+        [SerializeField] private int _startingMoney;
 
         public int ItemSellMaxValue => _itemSellMaxValue;
+        public int StartingMoney => _startingMoney;
     }
 }

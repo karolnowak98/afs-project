@@ -4,7 +4,7 @@ using Zenject;
 
 namespace AFSInterview.Items
 {
-    public class ItemsManager : ITickable
+    public class ItemsManager : IInitializable, ITickable
     {
         private ItemsConfigs _itemsConfigs;
         private InventoryConfig _inventoryConfig;
@@ -23,6 +23,11 @@ namespace AFSInterview.Items
             
             InventoryController = new InventoryController();
             _itemsSpawner = new ItemsSpawner(_itemsConfigs);
+        }
+        
+        public void Initialize()
+        {
+            InventoryController.Money = _inventoryConfig.StartingMoney;
         }
         
         public void Tick()

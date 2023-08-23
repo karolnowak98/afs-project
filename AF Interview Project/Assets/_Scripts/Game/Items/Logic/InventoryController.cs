@@ -7,10 +7,8 @@ namespace AFSInterview.Items
     {
         private readonly List<Item> _items = new ();
         private int _money;
-
-        public int ItemsCount => _items.Count;
-
-        private int Money
+        
+        public int Money
         {
             get => _money;
             set
@@ -23,6 +21,8 @@ namespace AFSInterview.Items
             }
         }
 
+        public int ItemsCount => _items.Count;
+        
         public event Action<int> OnMoneyChanged;
 		
         public void SellAllItemsUpToValue(int maxValue)
@@ -39,6 +39,7 @@ namespace AFSInterview.Items
             }
 
             Money = tempMoney;
+            OnMoneyChanged?.Invoke(Money);
         }
 
         public void AddItem(Item item)
