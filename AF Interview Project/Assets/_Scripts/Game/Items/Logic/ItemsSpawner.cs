@@ -2,7 +2,7 @@
 using AFSInterview.Global.Logic;
 using UnityEngine;
 
-namespace AFSInterview.Items
+namespace AFSInterview.Game.Items.Logic
 {
     public class ItemsSpawner
     {
@@ -19,7 +19,7 @@ namespace AFSInterview.Items
             var randomConfig = _itemsConfigs.GetRandomConfig;
             var obj = Object.Instantiate(randomConfig.Prefab, randomPosition, Quaternion.identity);
             obj.gameObject.TryGetComponent<ItemMono>(out var itemMono);
-            itemMono.ItemData = randomConfig.ItemData;
+            itemMono.ItemConfig = randomConfig;
         }
         
         private Vector3 GetRandomSpawnPosition()

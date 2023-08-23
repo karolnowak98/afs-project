@@ -1,4 +1,4 @@
-﻿using AFSInterview.Items;
+﻿using AFSInterview.Game.Items.Logic;
 using TMPro;
 using UnityEngine;
 using Zenject;

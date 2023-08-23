@@ -1,22 +1,18 @@
-﻿using AFSInterview.Game.Items.Data;
-using UnityEngine;
+﻿using System;
+using AFSInterview.Game.Items.Data;
+using AFSInterview.Game.Items.Logic.Interfaces;
 
-namespace AFSInterview.Items
+namespace AFSInterview.Game.Items.Logic
 {
     public class Item : IItem
     {
-        private readonly GameObject _gameObject;
-        
-        public ItemData ItemData { get; }
-        public int InstanceId { get; }
+        public ItemConfig ItemConfig { get; }
+        public string UniqueId { get; }
 
-        public Item(ItemData itemData, GameObject gameObject)
+        public Item(ItemConfig itemConfig)
         {
-            ItemData = itemData;
-            _gameObject = gameObject;
-            InstanceId = _gameObject.GetInstanceID();
+            ItemConfig = itemConfig;
+            UniqueId = Guid.NewGuid().ToString();
         }
-        
-        public void Destroy() => Object.Destroy(_gameObject);
     }
 }

@@ -18,32 +18,58 @@ MonoBehaviour:
     _itemData:
       _name: 0
       _moneyValue: 10
+      _itemActionType: 0
+      _itemsToGet: 
+      _moneyToGet: 0
   - _prefab: {fileID: 3824828261655614611, guid: 6c9aaac9013430b45a03acf934af96c1,
       type: 3}
     _itemData:
       _name: 1
       _moneyValue: 20
+      _itemActionType: 0
+      _itemsToGet: 
+      _moneyToGet: 0
   - _prefab: {fileID: 3824828261655614611, guid: 5afb8ddee6f7b2b45b8819750129a07f,
       type: 3}
     _itemData:
       _name: 2
       _moneyValue: 100
+      _itemActionType: 1
+      _itemsToGet: 
+      _moneyToGet: 150
   - _prefab: {fileID: 3824828261655614611, guid: 497ed6eb7fb4ef845a826f2c4a9ae4f4,
       type: 3}
     _itemData:
       _name: 3
       _moneyValue: 200
+      _itemActionType: 1
+      _itemsToGet: 0600000000000000
+      _moneyToGet: 20
   - _prefab: {fileID: 3824828261655614611, guid: a690ac3b9dfa72044907a1db6a71e400,
       type: 3}
     _itemData:
       _name: 5
       _moneyValue: 160
+      _itemActionType: 0
+      _itemsToGet: 
+      _moneyToGet: 0
   - _prefab: {fileID: 3824828261655614611, guid: b5200f07962f1264b82d4a4a71a8deff,
       type: 3}
     _itemData:
       _name: 4
       _moneyValue: 290
-  _spawnInterval: 0.13
+      _itemActionType: 1
+      _itemsToGet: 05000000
+      _moneyToGet: 50
+  - _prefab: {fileID: 3824828261655614611, guid: 0445da278acfc184db5102dcd4800f9f,
+      type: 3}
+    _itemData:
+      _name: 6
+      _moneyValue: 20
+      _itemActionType: 0
+      _itemsToGet: 
+      _moneyToGet: 0
+  _spawnInterval: 1
   _layerMask:
     serializedVersion: 2
     m_Bits: 8

@@ -1,19 +1,16 @@
 ﻿using System;
-using UnityEngine;
+using AFSInterview.Game.Items.Data;
+using AFSInterview.Game.Items.Logic.Interfaces;
 
-namespace AFSInterview.Items
+namespace AFSInterview.Game.Items.Logic
 {
-    // public class ConsumableItem : Item, IConsumable
-    // {
-    //     public ConsumableItem(string name, int value) : base(name, value)
-    //     {
-    //         
-    //     }
-    //
-    //     public void Use(Action onUse)
-    //     {
-    //         Debug.Log("Using" + Name);
-    //         onUse?.Invoke();
-    //     }
-    // }
+    public class ConsumableItem : Item, IConsumable
+    {
+        public ConsumableItem(ItemConfig itemConfig) : base(itemConfig) { }
+
+        public void Use(Action<ItemConfig> onUse)
+        {
+            onUse?.Invoke(ItemConfig);
+        }
+    }
 }

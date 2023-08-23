@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 using AFSInterview.Game.Items.Enums;
 using AFSInterview.Global.Logic;
-using UnityEngine;
 
 namespace AFSInterview.Game.Items.Data
 {

@@ -2,7 +2,7 @@
 using UnityEngine;
 using Zenject;
 
-namespace AFSInterview.Items
+namespace AFSInterview.Game.Items.Logic
 {
     public class ItemsInstaller : MonoInstaller
     {

@@ -1,14 +1,19 @@
 ﻿using AFSInterview.Game.Items.Data;
+using AFSInterview.Game.Items.Enums;
+using AFSInterview.Game.Items.Logic.Interfaces;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using Zenject;
+using Object = UnityEngine.Object;
 
-namespace AFSInterview.Items
+namespace AFSInterview.Game.Items.Logic
 {
     public class ItemsManager : IInitializable, ITickable
     {
         private ItemsConfigs _itemsConfigs;
         private InventoryConfig _inventoryConfig;
         private ItemsSpawner _itemsSpawner;
+        private ItemsCreator _itemsCreator;
         private float _nextItemSpawnTime;
         private Camera _mainCam;
         
@@ -20,9 +25,10 @@ namespace AFSInterview.Items
             _itemsConfigs = itemsConfigs;
             _inventoryConfig = inventoryConfig;
             _mainCam = Camera.main;
-            
-            InventoryController = new InventoryController();
+
+            _itemsCreator = new ItemsCreator(_itemsConfigs);
             _itemsSpawner = new ItemsSpawner(_itemsConfigs);
+            InventoryController = new InventoryController(_itemsCreator);
         }
         
         public void Initialize()
@@ -38,14 +44,19 @@ namespace AFSInterview.Items
                 _itemsSpawner.SpawnNewItem();
             }
 
-            if (Input.GetMouseButtonDown(0))
+            if (Mouse.current.leftButton.wasPressedThisFrame)
             {
                 TryPickUpItem();
             }
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Keyboard.current.spaceKey.wasPressedThisFrame)
             {
                 InventoryController.SellAllItemsUpToValue(_inventoryConfig.ItemSellMaxValue);
+            }
+            
+            if (Keyboard.current.eKey.wasPressedThisFrame)
+            {
+                InventoryController.UseRandomConsumableItem();
             }
         }
 
@@ -57,15 +68,15 @@ namespace AFSInterview.Items
             if (!hit.collider.TryGetComponent<ItemMono>(out var itemMono)) return;
 
             var gameObject = hit.transform.gameObject;
-            var item = new Item(itemMono.ItemData, gameObject);
-            
+            var item = ItemsCreator.CreateItem(itemMono.ItemConfig);
+
             InventoryController.AddItem(item);
             Object.Destroy(gameObject);
 
-            var itemData = item.ItemData;
+            var itemConfig = item.ItemConfig;
             
             //If not needed, log could be deleted
-            Debug.Log($"Picked up {itemData.Name} with value of {itemData.MoneyValue} and now have {InventoryController.ItemsCount} items");
+            Debug.Log($"Picked up {itemConfig.ItemData.Name} with value of {itemConfig.ItemData.MoneyValue} and now have {InventoryController.ItemsCount} items");
         }
     }
 }

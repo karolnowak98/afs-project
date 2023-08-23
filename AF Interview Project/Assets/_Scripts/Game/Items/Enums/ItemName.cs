@@ -7,6 +7,7 @@
         MoneyBag,
         LittleBox,
         JewelCase,
-        GoldenRing
+        GoldenRing,
+        Puppet
     }
 }
