@@ -81,35 +81,6 @@ namespace AFSInterview.Game.Combat.Logic
             OnMakeTurn?.Invoke(currentUnit.UnitConfig.Name, currentArmy.ArmySymbol);
         }
         
-        private void AttackUnit(IUnit unit, IArmy currentArmy, IUnit enemyUnit, IArmy enemyArmy)
-        {
-            var damage = unit.CalculateDamage(enemyUnit);
-
-            if (enemyUnit.TakeDamage(damage))
-            {
-                enemyArmy.RemoveUnit(enemyUnit);
-                _turns.Remove(enemyUnit);
-
-                if (!enemyArmy.IsAnyoneAlive)
-                {
-                    _combatEnded = true;
-                    OnCombatEnd?.Invoke(currentArmy.ArmySymbol);
-                    Debug.Log("Army " + "(" + currentArmy.ArmySymbol + ") won!!");
-                }
-            }
-
-            Debug.Log(unit.UnitConfig.Name + "( " + unit.InstanceId + ") attacked:  " + enemyUnit.UnitConfig.Name + "(" + enemyUnit.InstanceId + ")!!");
-        }
-        
-        private void SkipTurn(IUnit unit, IArmy currentArmy)
-        {
-            unit.SkipTurn();
-            _turns.Add(unit);
-            _turns.Remove(unit);
-            OnMakeTurn?.Invoke(unit.UnitConfig.Name, currentArmy.ArmySymbol);
-            Debug.Log(unit.UnitConfig.Name + "( " + unit.InstanceId + ") skipped turn!!");
-        }
-        
         private void DetermineArmies(IUnit unit, out IArmy currentArmy, out IArmy enemyArmy)
         {
             if (_xArmy.HasUnit(unit))
@@ -121,6 +92,31 @@ namespace AFSInterview.Game.Combat.Logic
             {
                 currentArmy = _oArmy;
                 enemyArmy = _xArmy;
+            }
+        }
+        
+        private void SkipTurn(IUnit unit, IArmy currentArmy)
+        {
+            unit.SkipTurn();
+            _turns.Add(unit);
+            _turns.Remove(unit);
+            OnMakeTurn?.Invoke(unit.UnitConfig.Name, currentArmy.ArmySymbol);
+        }
+        
+        private void AttackUnit(IUnit unit, IArmy currentArmy, IUnit enemyUnit, IArmy enemyArmy)
+        {
+            var damage = unit.CalculateDamage(enemyUnit);
+
+            if (enemyUnit.TryToKill(damage))
+            {
+                enemyArmy.RemoveUnit(enemyUnit);
+                _turns.Remove(enemyUnit);
+
+                if (!enemyArmy.IsAnyoneAlive)
+                {
+                    _combatEnded = true;
+                    OnCombatEnd?.Invoke(currentArmy.ArmySymbol);
+                }
             }
         }
     }

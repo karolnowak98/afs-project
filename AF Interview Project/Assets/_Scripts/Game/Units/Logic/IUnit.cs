@@ -8,7 +8,7 @@ namespace AFSInterview.Game.Units.Logic
         int InstanceId { get; }
         public bool CanAttack { get; }
         
-        bool TakeDamage(int damage);
+        bool TryToKill(int damage);
         int CalculateDamage(IUnit target);
         void SkipTurn();
         void Destroy();

@@ -21,7 +21,7 @@ namespace AFSInterview.Game.Units.Logic
             InstanceId = _gameObject.GetInstanceID();
         }
 
-        public bool TakeDamage(int damage)
+        public bool TryToKill(int damage)
         {
             _health -= damage;
             
