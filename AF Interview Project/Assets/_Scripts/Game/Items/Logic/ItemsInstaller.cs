@@ -1,6 +1,6 @@
-﻿using AFSInterview.Game.Items.Data;
-using UnityEngine;
+﻿using UnityEngine;
 using Zenject;
+using AFSInterview.Game.Items.Data;
 
 namespace AFSInterview.Game.Items.Logic
 {

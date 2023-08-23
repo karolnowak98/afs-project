@@ -1,10 +1,8 @@
-﻿using AFSInterview.Game.Items.Data;
-using AFSInterview.Game.Items.Enums;
-using AFSInterview.Game.Items.Logic.Interfaces;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
-using Zenject;
 using Object = UnityEngine.Object;
+using Zenject;
+using AFSInterview.Game.Items.Data;
 
 namespace AFSInterview.Game.Items.Logic
 {
@@ -75,7 +73,6 @@ namespace AFSInterview.Game.Items.Logic
 
             var itemConfig = item.ItemConfig;
             
-            //If not needed, log could be deleted
             Debug.Log($"Picked up {itemConfig.ItemData.Name} with value of {itemConfig.ItemData.MoneyValue} and now have {InventoryController.ItemsCount} items");
         }
     }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using AFSInterview.Game.Items.Enums;
 using UnityEngine;
+using AFSInterview.Game.Items.Enums;
 
 namespace AFSInterview.Game.Items.Data
 {

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
+using ModestTree;
 using AFSInterview.Game.Items.Data;
 using AFSInterview.Game.Items.Enums;
 using AFSInterview.Game.Items.Logic.Interfaces;
-using ModestTree;
-using UnityEngine;
 
 namespace AFSInterview.Game.Items.Logic
 {

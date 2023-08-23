@@ -1,7 +1,7 @@
-﻿using AFSInterview.Game.Items.Logic;
-using TMPro;
-using UnityEngine;
+﻿using UnityEngine;
 using Zenject;
+using TMPro;
+using AFSInterview.Game.Items.Logic;
 
 namespace AFSInterview.Game.Items.UI
 {
