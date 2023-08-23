@@ -5,14 +5,9 @@ using AFSInterview.Game.Units.Enums;
 
 namespace AFSInterview.Game.Units.Data
 {
-    //If I would have OdinInspector then I would use [InlineEditor] here
     [Serializable]
     public class UnitConfig
     {
-        //If I would have OdinInspector then I would make that much more cleaner of course :)
-        //If I would have OdinInspector then I would create one serialized dictionary <UnitAttribute, int> instead of 2 lists for overridesValues attributes like below
-        //[SerializeField] private Dictionary<UnitAttribute, int> _attributeOverrides;
-        
         [SerializeField] private GameObject _prefab;
         [SerializeField] private UnitName _name;
         [SerializeField] private List<UnitAttribute> _attributes = new();

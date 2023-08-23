@@ -5,15 +5,12 @@ using AFSInterview.Game.Items.Enums;
 
 namespace AFSInterview.Game.Items.Data
 {
-    //Consider changing ItemData to class and inherit
     [Serializable]
     public struct ItemData
     {
         [SerializeField] private ItemName _name;
         [SerializeField] private int _moneyValue;
         [SerializeField] private ItemActionType _itemActionType;
-        
-        //If I would have OdinInspector I would use ShowIf attribute to show/hide properties like itemsToGet, because they are related to use action type
         [SerializeField] private List<ItemName> _itemsToGet;
         [SerializeField] private int _moneyToGet;
         

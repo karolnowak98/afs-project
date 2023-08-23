@@ -6,14 +6,9 @@ using AFSInterview.Game.Units.Enums;
 
 namespace AFSInterview.Game.Combat.Data
 {
-    //If I would have OdinInspector then I would use [InlineEditor] here
     [Serializable]
     public class ArmyConfig
     {
-        //If I would have OdinInspector then I would make that much more cleaner of course :)
-        //If I would have OdinInspector then I would create one serialized dictionary <int, UnitName> instead of 2 lists for units like below
-        //[SerializeField] private Dictionary<UnitName, int> _unitNumbers;
-        
         [SerializeField] private List<int> _numbersOfUnits = new();
         [SerializeField] private List<UnitName> _unitNames = new();
         [SerializeField] private ArmySymbol _armySymbol;

@@ -9,12 +9,10 @@ namespace AFSInterview.Game.Items.Logic
 
         public void TakeOff()
         {
-            //TakeOff item
         }
 
         public void Wear()
         {
-            //Wear item
         }
     }
 }

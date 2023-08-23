@@ -70,10 +70,6 @@ namespace AFSInterview.Game.Items.Logic
 
             InventoryController.AddItem(item);
             Object.Destroy(gameObject);
-
-            var itemConfig = item.ItemConfig;
-            
-            Debug.Log($"Picked up {itemConfig.ItemData.Name} with value of {itemConfig.ItemData.MoneyValue} and now have {InventoryController.ItemsCount} items");
         }
     }
 }

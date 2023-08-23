@@ -91,7 +91,6 @@ namespace AFSInterview.Game.Combat.Logic
                 _turns.Remove(currentUnit);
             
                 OnMakeTurn?.Invoke(currentUnit.UnitConfig.Name, currentArmy.ArmySymbol);
-                Debug.Log( currentUnit.UnitConfig.Name + "( "+ currentUnit.InstanceId  +") skipped turn!!");
                 return;
             }
             
@@ -107,7 +106,6 @@ namespace AFSInterview.Game.Combat.Logic
                 {
                     _combatEnded = true;
                     OnCombatEnd?.Invoke(currentArmy.ArmySymbol);
-                    Debug.Log( "Army " + "( "+ currentArmy.ArmySymbol  +") won!!");
                     return;
                 }
             }
@@ -116,7 +114,6 @@ namespace AFSInterview.Game.Combat.Logic
             _turns.Remove(currentUnit);
             
             OnMakeTurn?.Invoke(currentUnit.UnitConfig.Name, currentArmy.ArmySymbol);
-            Debug.Log( currentUnit.UnitConfig.Name + "( "+ currentUnit.InstanceId  +") attacked:  " + enemyUnit.UnitConfig.Name + "(" + enemyUnit.InstanceId + ")!!");
         }
     }
 }

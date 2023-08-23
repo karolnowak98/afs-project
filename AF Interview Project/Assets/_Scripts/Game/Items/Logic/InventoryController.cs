@@ -83,13 +83,10 @@ namespace AFSInterview.Game.Items.Logic
                 foreach (var itemName in itemsToGet)
                 {
                     _items.Add(_itemsCreator.CreateItem(itemName));
-                    
-                    Debug.Log($"You found an item: {itemName}!!");
                 }
             }
             
             Money += moneyToGet;
-            Debug.Log($"You found {moneyToGet} money!!");
         }
     }
 }

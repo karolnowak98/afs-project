@@ -3,7 +3,6 @@ using UnityEngine;
 
 namespace AFSInterview.Game.Items.Data
 {
-    //If I would have OdinInspector then I would use [InlineEditor] here
     [Serializable]
     public struct ItemConfig
     {
