@@ -20,6 +20,12 @@ namespace AFSInterview.Game.Combat.Data
         [SerializeField] private Vector3 _centerOfSpawner;
         [SerializeField] private Vector2 _spawnerFieldDimensions;
 
+        public ArmySymbol ArmySymbol => _armySymbol;
+        public List<int> NumbersOfUnits => _numbersOfUnits;
+        public List<UnitName> UnitNames => _unitNames;
+        public Vector3 CenterOfSpawner => _centerOfSpawner;
+        public Vector2 SpawnerFieldDimensions => _spawnerFieldDimensions;
+        
         public ArmyConfig()
         {
             for (var i = 0; i < Enum.GetValues(typeof(UnitName)).Length; i++)
@@ -28,11 +34,5 @@ namespace AFSInterview.Game.Combat.Data
                 _numbersOfUnits.Add(0);
             }
         }
-
-        public ArmySymbol ArmySymbol => _armySymbol;
-        public List<int> NumbersOfUnits => _numbersOfUnits;
-        public List<UnitName> UnitNames => _unitNames;
-        public Vector3 CenterOfSpawner => _centerOfSpawner;
-        public Vector2 SpawnerFieldDimensions => _spawnerFieldDimensions;
     }
 }
