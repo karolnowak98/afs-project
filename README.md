@@ -1,4 +1,4 @@
-![image](https://github.com/karolnowak98/afs-project/assets/74615234/ed26bf3f-ea20-430c-ac2b-b9341bc7194b)# afs-project
+# afs-project
 
 Unity version: 2022.3.4f1
 
